@@ -16,7 +16,12 @@ public class ManagerImpl implements ManagerI {
     }
 
     @Override
-    public void mediaUpdate(ContentI item){
+    public void updateMedia(ContentI item){
         item.increaseAccessCounter();
+    }
+
+    @Override
+    public void deleteMedia(ContentI item){
+        memory.remove(item);
     }
 }
